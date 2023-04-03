@@ -11,7 +11,7 @@ public class Main {
         queue.add(1);
         queue.add(10);
 
-        System.out.println(Size(queue));
+        System.out.println(SizeWithoutDuplication(queue));
     }
     // First Implementation
     private static int Size(Queue<Integer> qu) {
@@ -26,5 +26,17 @@ public class Main {
         while (!temp.isEmpty()) qu.add(temp.poll());
 
         return count;
-    }    
+    }
+    private static int SizeWithoutDuplication(Queue<Integer> queue) {
+        int count = 0;
+
+        Object[] array = queue.toArray(); 
+
+        for (Object number:array) {
+            int intNumber = Integer.valueOf(number.toString());
+            if (intNumber > 99 && intNumber < 1000) ++count;
+        }
+
+        return count;
+    }
 }

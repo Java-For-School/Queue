@@ -1,0 +1,3 @@
+SecretA -> Sum the queue
+SecretB -> Amount of elements in the queue
+SecretC -> Create a queue which includes all averages of the input queue of queues
